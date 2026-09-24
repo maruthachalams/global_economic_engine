@@ -1,0 +1,37 @@
+artifact_path: file:///D:/MLOps_cbe/week_4/global_economic_engine/mlruns/1/models/m-5773a8c7f0ba413788734a9317924179/artifacts
+flavors:
+  lightgbm:
+    code: null
+    data: model.skops
+    lgb_version: 4.7.0
+    model_class: lightgbm.sklearn.LGBMClassifier
+    serialization_format: skops
+    skops_trusted_types:
+    - lightgbm.sklearn.LGBMRegressor
+    - collections.OrderedDict
+    - lightgbm.basic.Booster
+    - lightgbm.sklearn.LGBMClassifier
+  python_function:
+    data: model.skops
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.12.2
+is_signature_from_type_hint: false
+mlflow_version: 3.15.2
+model_id: m-5773a8c7f0ba413788734a9317924179
+model_size_bytes: 183208
+model_uuid: m-5773a8c7f0ba413788734a9317924179
+prompts: null
+run_id: b83eb802429b40b9b87fc5ec5fc24836
+signature:
+  inputs: '[{"type": "double", "name": "US_Dollar_DXY", "required": true}, {"type":
+    "double", "name": "Gold_Price", "required": true}, {"type": "double", "name":
+    "Silver_Price", "required": true}, {"type": "double", "name": "Crude_Oil_Price",
+    "required": true}, {"type": "double", "name": "Macro_News_Sentiment", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-08-26 06:30:46.458993'
