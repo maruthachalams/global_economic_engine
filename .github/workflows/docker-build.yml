@@ -1,0 +1,22 @@
+name: CI Pipeline - Build Docker Image
+
+# 1. When should this pipeline run?
+on:
+  push:
+    branches:
+      - main
+
+# 2. What jobs should it do?
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # GitHub gives us a free Linux server
+
+    steps:
+      # Step A: Download your code from the repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step B: Test if the Docker container builds successfully
+      - name: Build Docker Image
+        run: |
+          docker build -t global-economic-engine:latest .    
